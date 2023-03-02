@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:watsapp_cloneapp/utilities.dart';
+
+import 'detailsofmap.dart';
 
 class Whatsappcallpage extends StatefulWidget {
   const Whatsappcallpage({Key? key}) : super(key: key);
@@ -10,48 +13,59 @@ class Whatsappcallpage extends StatefulWidget {
 class _WhatsappcallpageState extends State<Whatsappcallpage> {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
+    return Scaffold(floatingActionButton: FloatingActionButton(onPressed: (){},child: Icon(Icons.phone_bluetooth_speaker_outlined),),
+      body: Column(
         children: [
-          ListTile(
-            leading:  CircleAvatar(
-              backgroundImage: NetworkImage(""),
-              radius: 25,
-              child: Icon(Icons.link_outlined),
-            ),
-            title: Text("Create call link"),
-            subtitle:Text("share a link for your Whatsapp call"),
-          ),
-
-          Row(
-            children: [
-              Text("Recent "),
-            ],
-          ),
           Expanded(
-            child: ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context,index) {
-                  return Column(
-                    children: [
-                      ListTile(
-                        leading: CircleAvatar(
-                          backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7maG_e4yixSnlAz5L4B0khkNgG9O2rD3_Kg&usqp=CAU"),
-                          radius: 25,
-                        ),
-                        title: Text("name2"),
-                        subtitle:Text("yesterday 1.13 pm"),
-                        trailing: Icon(Icons.call),
-                      ),
+            child: Column(
+              children: [
+                ListTile(
+                  leading:  CircleAvatar(
+                    backgroundColor: Utilities.backgcolor,
+                    radius: 25,
+                    child: Icon(Icons.link_outlined),
+                  ),
+                  title: Text("Create call link"),
+                  subtitle:Text("share a link for your Whatsapp call"),
+                ),
 
-                    ],
-                  );
+                Row(
+                  children: [
+                    Text("Recent "),
+                  ],
+                ),
+                Expanded(
+                  child: ListView.builder(
+                      itemCount: contact.length,
+                      itemBuilder: (context,index) {
+                        final contacts = contact[index];
+                        return Column(
+                          children: [
+                            ListTile(
+                              leading: Container(
+                                height: 80,
+                                width: 80,
+                                decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),),
+                                child: Image.asset(contacts["profile_pic"]
 
-                }
+                                ) ,
+                              ),
+                              title: Text(contacts["name"]),
+                              subtitle:Text(contacts["last_seen"]),
+                              trailing: Icon(Icons.call),
+                            ),
+
+                          ],
+                        );
+
+                      }
+                  ),
+                ),
+
+
+              ],
             ),
           ),
-
-
         ],
       ),
     );
