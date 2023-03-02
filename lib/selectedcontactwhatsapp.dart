@@ -12,7 +12,7 @@ class _whatupcontactlistState extends State<whatupcontactlist> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(7, 77, 66, 100),
-        leading: Icon(Icons.arrow_back),
+
         title: Column(
           children: [
             Text("Select contact",style: TextStyle(

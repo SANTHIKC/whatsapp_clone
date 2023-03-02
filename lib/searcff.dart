@@ -14,7 +14,7 @@ class _SearchbbState extends State<Searchbb> {
         backgroundColor: Color.fromRGBO(7, 77, 66, 100),
         title: Column(
           children: [
-            Text("Select Contact",style: TextStyle(
+            Text("Select contact",style: TextStyle(
               fontWeight: FontWeight.bold,
             ),),
             Padding(
@@ -80,7 +80,6 @@ class _SearchbbState extends State<Searchbb> {
             padding: const EdgeInsets.all(10),
             child: ListTile(
               leading:  CircleAvatar(
-                backgroundImage: NetworkImage(""),
                 radius: 25,
                 child: Icon(Icons.link_outlined),
               ),
@@ -88,7 +87,7 @@ class _SearchbbState extends State<Searchbb> {
 
             ),
           ),
-         
+
           Padding(
             padding: const EdgeInsets.all(10),
             child: ListTile(
@@ -105,6 +104,7 @@ class _SearchbbState extends State<Searchbb> {
             padding: const EdgeInsets.all(10),
             child: ListTile(
               leading:  CircleAvatar(
+                backgroundImage: NetworkImage(""),
                 radius: 25,
                 child: Icon(Icons.group_add),
               ),
@@ -114,7 +114,7 @@ class _SearchbbState extends State<Searchbb> {
             ),
           ),
 
-         
+
           Expanded(
             child: ListView.builder(
                 itemCount: 10,
@@ -128,12 +128,9 @@ class _SearchbbState extends State<Searchbb> {
                         ),
                         title: Text("name2"),
                         subtitle:Text("message yourself"),
-                        trailing: Row(
-                          children: [
+                        trailing:
                             Icon(Icons.call),
-                            Icon(Icons.camera_outdoor)
-                          ],
-                        ),
+
                       ),
 
                     ],
@@ -149,5 +146,3 @@ class _SearchbbState extends State<Searchbb> {
     );
   }
 }
-
-
