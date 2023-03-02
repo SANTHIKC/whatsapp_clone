@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:watsapp_cloneapp/searcff.dart';
+=======
+>>>>>>> 8617188bd2bba6e5745821f3248467ec9c266eab
 import 'package:watsapp_cloneapp/utilities.dart';
 
 import 'detailsofmap.dart';
@@ -14,9 +17,13 @@ class Whatsappcallpage extends StatefulWidget {
 class _WhatsappcallpageState extends State<Whatsappcallpage> {
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Scaffold(floatingActionButton: FloatingActionButton(onPressed: (){
       Navigator.of(context).push(MaterialPageRoute(builder: (context) => Searchbb(),));
     },child: Icon(Icons.phone),),
+=======
+    return Scaffold(floatingActionButton: FloatingActionButton(onPressed: (){},child: Icon(Icons.phone_bluetooth_speaker_outlined),),
+>>>>>>> 8617188bd2bba6e5745821f3248467ec9c266eab
       body: Column(
         children: [
           Expanded(
