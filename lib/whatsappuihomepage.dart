@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:watsapp_cloneapp/selectedcontactwhatsapp.dart';
 import 'package:watsapp_cloneapp/whatsappcallpage.dart';
 import 'package:watsapp_cloneapp/whatsappchatpage.dart';
 import 'package:watsapp_cloneapp/whatsappcommunitypage.dart';
@@ -25,15 +24,7 @@ class _WhatsAppUiPageState extends State<WhatsAppUiPage> {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => whatupcontactlist(),
-            ));
-          },
-          child: Icon(Icons.chat),
-          backgroundColor: Color.fromRGBO(7, 77, 66, 100),
-        ),
+
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Color.fromRGBO(7, 77, 66, 100),
